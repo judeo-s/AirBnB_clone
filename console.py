@@ -26,7 +26,7 @@ class HBNBCommand(Cmd):
         pass
 
     def do_create(self, line):
-        """ create command """
+        """ create command for the program"""
         if not line:
             print("** class name missing **")
             return
@@ -39,7 +39,7 @@ class HBNBCommand(Cmd):
         print(model.id)
 
     def do_show(self, line):
-        """ show command """
+        """ show command for the program"""
         if not line:
             print("** class name missing **")
             return
@@ -66,7 +66,7 @@ class HBNBCommand(Cmd):
             print("** no instance found **")
 
     def do_all(self, line):
-        """ all command """
+        """ all command for the program"""
         from models import storage, classes_dict
         res = []
         if line:
@@ -85,7 +85,7 @@ class HBNBCommand(Cmd):
         print(res)
 
     def do_destroy(self, line):
-        """ destroy command """
+        """ destroy command for the program"""
         if not line:
             print("** class name missing **")
             return
@@ -110,7 +110,7 @@ class HBNBCommand(Cmd):
             print("** no instance found **")
 
     def do_update(self, line):
-        """ update command """
+        """ update command for the program"""
         if not line:
             print("** class name missing **")
             return
@@ -145,7 +145,7 @@ class HBNBCommand(Cmd):
             print("** no instance found **")
 
     def do_count(self, line):
-        """ count command """
+        """ count command for the program"""
         from models import storage, classes_dict
         count = 0
         if line:
