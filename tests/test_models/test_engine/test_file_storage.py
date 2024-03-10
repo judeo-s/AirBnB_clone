@@ -11,11 +11,11 @@ class TestBaseMethods(TestCase):
     """Suite to test storage"""
 
     def setUp(self) -> None:
-        """set up method"""
+        """set up method for FileStorage"""
         self.storage = FileStorage()
 
     def test_attributes(self):
-        """Test it is a dictionary"""
+        """Test if file.json content is a dictionary"""
         self.assertEqual(self.storage.file_path, "file.json")
         self.assertEqual(type(self.storage.all()), dict)
 

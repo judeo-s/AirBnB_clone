@@ -10,6 +10,7 @@ class FileStorage:
 
     @property
     def file_path(self):
+        '''returns self.__file_path'''
         return self.__file_path
 
     def all(self) -> dict:
@@ -17,7 +18,7 @@ class FileStorage:
         return self.__objects
 
     def reload(self) -> None:
-        """reload method"""
+        """reload method to read from file.json and update self.__objects"""
         try:
             with open(self.__file_path, "r", encoding="utf-8") as f:
                 loaded_dict = load(f)
@@ -30,13 +31,13 @@ class FileStorage:
             pass
 
     def save(self) -> None:
-        """save"""
+        """saves self.__objects to file.json"""
         saved_dict = {key: obj.to_dict()
                       for key, obj in self.__objects.items()}
         with open(self.__file_path, "w", encoding="utf-8") as f:
             dump(saved_dict, f)
 
     def new(self, obj) -> None:
-        """new element is added to dic"""
+        """new element is added to self.__objects"""
         key: str = obj.__class__.__name__ + "." + obj.id
         self.__objects.update({key: obj})
