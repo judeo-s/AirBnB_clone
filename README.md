@@ -3,14 +3,15 @@ This repository contains the initial stage of a student project to build a clone
 
 
 # Commands
-* create - Creates an instance based on given class
 
-* destroy - Destroys an object based on class and UUID
+* create - Creates an instance based on given class.
 
-* show - Shows an object based on class and UUID
+* destroy - Destroys an object based on class and UUID.
 
-* all - Shows all objects the program has access to, or all objects of a given class
+* show - Shows an object based on class and UUID.
 
-* update - Updates existing attributes an object based on class name and UUID
+* all - Shows all objects the program has access to, or all objects of a given class.
 
-* quit - Exits the program (EOF will as well)
+* update - Updates existing attributes an object based on class name and UUID.
+
+* quit - Exits the program (EOF will as well).
